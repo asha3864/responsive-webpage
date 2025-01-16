@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Layout styling */
+.container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.left-menu,
+.right-panel {
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.left-menu {
+    width: 20%;
+}
+
+.main-content {
+    width: 60%;
+    padding: 15px;
+}
+
+.right-panel {
+    width: 20%;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Collapsible menu */
+.collapsible {
+    display: none;
+}
+
+.collapsible.open {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .left-menu {
+        display: none;
+    }
+}

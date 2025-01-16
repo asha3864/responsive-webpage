@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">Fixed Navbar</div>
+    <div class="container">
+        <div class="left-menu">
+            <button onclick="toggleMenu()">Toggle Menu</button>
+            <div id="collapsible-menu" class="collapsible">
+                <p>Menu Item 1</p>
+                <p>Menu Item 2</p>
+                <p>Menu Item 3</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Main Content Area</h1>
+            <p>This is where the main content will go.</p>
+        </div>
+        <div class="right-panel">
+            <h3>Right Panel</h3>
+            <p>Additional information can go here.</p>
+        </div>
+    </div>
+    <div class="footer">Footer Content</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
