@@ -1,0 +1,43 @@
+import json
+
+def lambda_handler(event, context):
+    """
+    AWS Lambda function to add two numbers provided in the event.
+
+    Parameters:
+    event (dict): Contains 'num1' and 'num2' as keys for input numbers.
+    context: Lambda context object.
+
+    Returns:
+    dict: A response object with the sum of the numbers.
+    """
+    try:
+        # Extract numbers from the event
+        num1 = event.get('num1')
+        num2 = event.get('num2')
+
+        # Validate inputs
+        if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
+            raise ValueError("'num1' and 'num2' must be numbers.")
+
+        # Calculate the sum
+        result = num1 + num2
+
+        # Return success response
+        return {
+            'statusCode': 200,
+            'body': json.dumps({
+                'message': 'Addition successful',
+                'result': result
+            })
+        }
+
+    except Exception as e:
+        # Handle errors
+        return {
+            'statusCode': 400,
+            'body': json.dumps({
+                'message': 'Error occurred',
+                'error': str(e)
+            })
+        }
